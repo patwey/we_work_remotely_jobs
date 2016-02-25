@@ -1,6 +1,6 @@
 # WeWorkRemotelyJobs
 
-TODO: description
+Parses the WeWorkRemotely programming jobs RSS feed
 
 ## Installation
 
@@ -20,13 +20,32 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: usage instructions
+For a list of the WeWorkRemotely jobs with a default set of technologies parsed out of their descriptions:
+```ruby
+we_work_remotely_jobs = WeWorkRemotelyJobs.scrape
+```
 
-## Development
+Or, specifiy your own set of technologies to parse out of the descriptions:
+```ruby
+we_work_remotely_jobs = WeWorkRemotelyJobs.scrape(['elixir', 'java', 'lisp'])
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Sample job:
+```ruby
+{ 
+  :job=> {
+    :title=>"Sample.io: Rails Programmer with Javascript Experience",                                                            :url=>"https://weworkremotely.com/jobs/1-rails-programmer-with-javascript-experience", 
+    :location=>"Denver, CO", 
+    :technologies=>["javascript", "ember", "angular", "rails"], 
+    :description=>"Wow what a great job", 
+    :remote=>true, 
+    :posted_date=>2016-02-25 18:53:03 UTC
+  }, 
+  :company=> { 
+    :name=>"Sample.io"
+  }
+}
+```
 
 ## Contributing
 
@@ -35,4 +54,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/patwey
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
