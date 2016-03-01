@@ -2,7 +2,7 @@
 
 Parses the WeWorkRemotely programming jobs RSS feed
 
-RubyGems page: [https://rubygems.org/gems/we_work_remotely_jobs](https://rubygems.org/gems/we_work_remotely_jobs)
+RubyGems: [https://rubygems.org/gems/we_work_remotely_jobs](https://rubygems.org/gems/we_work_remotely_jobs)
 
 ## Installation
 
